@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="css/todo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+  <base href="todo.html" target="_blank">
+  <header>
+    <a href="#" class="logo" target="_self">TO-DO APP</a>
+
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar"><i class="fa fa-bars"></i></label>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="https://www.upwork.com/workwith/yousufn4">Upwork</a></li>
+        <li><a href="#" target="_self">Portfolio
+            <i class="fa fa-caret-down"></i></a>
+          <ul>
+            <li><a href="Optical-Market-Complete-Static-Website/index.html">Optical Market</a></li>
+            <hr>
+            <li><a href="SimpleCalculator/SimpleCalculator.html">Simple Calculator</a></li>
+            <li><a href="BMI-Calculator/bmi-calculator.html">BMI Calculator</a></li>
+          </ul>
+        </li>
+        <li><a href="https://github.com/YousufNK23">Social
+            <i class="fa fa-caret-down"></i></a>
+          <ul>
+            <li><a href="https://www.github.com/YousufNK23">
+                <i class="fa fa-github"></i> GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/yousuf-naveed-khan-6a3564274">
+                <i style="text-align: center;" class="fa fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href=https://www.facebook.com/yousufnaveed.001>
+                <i class="fa fa-facebook"></i> Facebook
+              </a></li>
+            <li><a href="https://www.instagram.com/yousufnaveed23/">
+                <i style="text-align: center;" class="fa fa-instagram"></i> Instagram
+              </a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <main>
+    <div class="container">
+      <div class="ToDoApp">
+        <div class="container">
+          <div class="blur"></div>
+          <div class="mb-3">
+            <label for="title" class="form-label" style="font-weight: bolder;  font-size: 16px;">Title</label>
+            <input type="text" class="form-control" id="title"
+              style="background: none; border: 2px solid #333; font-weight: bold;" placeholder="Enter Title Here"
+              required>
+          </div>
+          <br>
+          <div class="mb-3">
+            <label for="email" class="form-label" style="font-weight: bolder;  font-size: 16px;">Email</label>
+            <input type="email" class="form-control" id="email"
+              style="background: none; border: 2px solid #333; font-weight: bold;" placeholder="Enter Your Email"
+              required>
+          </div>
+          <br>
+          <div class="mb-3">
+            <label for="contact" class="form-label" style="font-weight: bolder;  font-size: 16px;">Contact
+              Number</label>
+            <input type="number" class="form-control" id="contact"
+              style="background: none; border: 2px solid #333; font-weight: bold;"
+              placeholder="Enter Your Contact Number" required>
+          </div>
+          <br>
+          <div class="mb-3">
+            <label for="date" class="form-label" style="font-weight: bolder;  font-size: 16px;">Date</label>
+            <input type="date" class="form-control" id="date"
+              style="background: none; border: 2px solid #333; font-weight: bold;" required>
+          </div>
+          <br>
+          <div class="mb-3">
+            <label for="desc" class="form-label" style="font-weight: bolder;  font-size: 16px;">Description</label>
+            <textarea class="form-control" id="desc" rows="3"
+              style="background: none; border: 2px solid #333; font-weight: bold;" placeholder="Enter Description Here"
+              required></textarea>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-success" type="button" id="add">Add To List</button>
+            <button class="btn btn-danger" type="button" onclick="clearAll()">Clear All</button>
+          </div>
+          <br>
+          <br>
+
+          <div class="main">
+            <table class="tg">
+              <thead>
+                <tr>
+                  <th class="tg-0lax">#</th>
+                  <th class="tg-0lax">Title</th>
+                  <th class="tg-0lax">Email</th>
+                  <th class="tg-0lax">Contact Number</th>
+                  <th class="tg-0lax">Date</th>
+                  <th class="tg-0lax">Description</th>
+                  <th class="tg-0lax">Action</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <tr>
+                  <td class="tg-0lax">1</td>
+                  <td class="tg-0lax">This is title</td>
+                  <td class="tg-0lax">This is email</td>
+                  <td class="tg-0lax">This is contact number</td>
+                  <td class="tg-0lax">This is date</td>
+                  <td class="tg-0lax">This is description</td>
+                  <td class="tg-0lax"><button class="btn btn-danger" type="button"
+                      onclick="deleted(${index})">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <section class="footer">
+      <div class="social">
+
+        <a href="https://www.github.com/YousufNK23/"><i class="fa fa-github"></i></a>
+
+        <a href="https://www.linkedin.com/in/yousuf-naveed-khan-6a3564274"><i class="fa fa-linkedin"></i></a>
+
+        <a href="https://www.facebook.com/yousufnaveed.001"><i class="fa fa-facebook"></i></a>
+
+        <a href="https://www.instagram.com/yousufnaveed23/"><i class="fa fa-instagram"></i></a>
+
+      </div>
+
+      <p>Copyright &copy; <a href="#">TO-DO APP</a> 2023. All rights reserved.</p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

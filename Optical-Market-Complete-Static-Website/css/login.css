@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210916/pngtree-background-elegant-black-with-gold-line-side-2-image_901636.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+a span {
+    color: #e20f2f;
+}
+.user-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'monospace' , sans-serif;
+    min-height: 100vh;
+    background: #274060;
+    transition: .5s;
+    position: relative;
+    width: 800px;
+    height: 300px;
+    margin: 20px;
+    margin-left: 20%;
+    margin-top: 50px;
+}
+.user-content.active{
+    background: #A63C06;
+}
+.blueBg{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+}
+.blueBg .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blueBg .box h2{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.blueBg .box button{
+    color: #333;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.formBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+    transition: .5s ease-in-out;
+    overflow: hidden;
+}
+.formBx.active{
+    left: 50%;
+}
+
+.formBx .form{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: .5s;
+}
+.formBx .signin-form{
+    transition-delay: .25s;
+}
+.formBx.active .signin-form{
+    left: -100%;
+    transition-delay: 0s;
+}
+.formBx .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.formBx .form form h3{
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.formBx .form form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+.formBx .form form input[type="submit"]{
+    outline: none;
+    cursor: pointer;
+    background: #274060;
+    max-width: 100px;
+    color: #fff;
+    border: none;
+}
+.formBx .form form a{
+    color: #333;
+}
+.formBx.active .signup-form{
+    left: 0;
+    transition-delay: 0s;
+}
+.formBx .signup-form{
+    left: 100%;
+}
+.formBx .signup-form form input[type="submit"]{
+    outline: none;
+    cursor: pointer;
+    background: #A63C06;
+    max-width: 100px;
+    color: #fff;
+}
+@media (max-width: 991px){
+    .container{
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .blueBg{
+        top: 0%;
+        height: 100%;
+    }
+    .formBx{
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+    .blueBg .box{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+    .box.sign-in{
+        top: 0;
+    }
+    .formBx.active{
+        left: 0;
+        top: 150px;
+    }
+}

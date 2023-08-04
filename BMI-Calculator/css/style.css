@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+
+.heading {
+  font-family: 'Bree Serif', serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+}
+
+.container .bmi {
+  border-radius: 25px;
+  min-height: 80vh;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0 0 15px #9d9c9c;
+  transform: all 0.3 ease;
+}
+
+.container label {
+  display: block;
+  font-family: 'Bree Serif', serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.container input {
+  font-family: 'Montserrat', sans-serif;
+  height: 50%;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  height: 20%;
+  width: 40%;
+  background-color: #198754;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 20px;
+  margin-left: 30%;
+  border: none;
+  box-shadow: -12 -6 15px #9d9c9c;
+}
+
+.container button:hover {
+  background-color: #18af68;
+  color: whitesmoke;
+}
+
+.container .paragraph {
+  font-family: 'Bree Serif', serif;
+  font-size: 16px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50%;
+  color: white;
+  padding: 25px;
+  margin: 20px;
+  margin-top: 20px;
+  margin-left: 25%;
+  text-align: center;
+}

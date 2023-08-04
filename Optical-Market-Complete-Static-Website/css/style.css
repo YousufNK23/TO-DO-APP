@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #332e5c;
+    background-image: linear-gradient(135deg, #302e5c 0%, #242a2d 70%);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.menu{
+    width: 80%;
+    margin: 15px auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+}
+.logo{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.logo span{
+    color: #9799e0;
+    font-weight: 500;
+}
+.fa-align-justify{
+    font-size: 1.3rem;
+}
+
+.main{
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 5;
+    width: 100%;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+header{    
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210916/pngtree-background-elegant-black-with-gold-line-side-2-image_901636.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(67, 56, 184, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    max-width: 30rem;
+    text-align: center;
+    color: #FFF;
+}
+
+.btn{
+    background-color: #9997e0;
+    cursor: pointer;
+    border: 1px solid #FFF;
+    border-radius: .5rem;
+    padding: .9rem 1.3rem;
+    color: #FFF;
+    transition: .2s linear;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+p{
+    line-height: 25px;
+    margin-bottom: 2rem;
+}
+
+.container.active .main{
+    animation: main-anim .5s ease;
+    transform: perspective(1200px) rotateY(25deg) translateZ(240px) scale(0.4);
+}
+
+@keyframes main-anim{
+from{
+    transform: translate(0);
+}
+to{
+    transform: perspective(1200px) rotateY(25deg) translateZ(240px) scale(0.4);
+}
+}
+
+.links{
+    position: absolute;
+    height: 100vh;
+    width: 30%;
+    top: 0; right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    list-style: none;
+}
+
+.links a{
+    text-decoration: none;
+    color: #EEE;
+    padding: .4rem 0;
+    display: inline-block;
+    font-size: .7rem;
+    font-weight: 300;
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(0);
+
+}
+.fa-times{
+    transform: rotate(90deg);
+    transition: .5s ease-in-out;
+}
+.links a:hover{
+    color: #97c4e0;
+}
+
+.container.active .links a{
+    animation: apear 1s forwards ease;
+
+}
+
+@keyframes apear{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

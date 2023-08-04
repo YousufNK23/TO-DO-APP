@@ -1,0 +1,130 @@
+body {
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210916/pngtree-background-elegant-black-with-gold-line-side-2-image_901636.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a span {
+    color: #e20f2f;
+}
+
+.box {
+    font-family: 'Amaranth', sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.box:before {
+    content: "";
+    background: rgba(87, 54, 151, 0.7);
+    height: 0;
+    border-radius: 0 0 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.box:hover:before {
+    height: 100%;
+    border-radius: 0;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease 0s;
+}
+
+.box:hover img {
+    filter: blur(3px);
+}
+
+.box-content {
+    color: #fff;
+    width: 100%;
+    padding: 0 15px;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transition: all 0.4s ease 0.1s;
+}
+
+.box:hover .box-content {
+    opacity: 1;
+    top: 55%;
+}
+
+.box .title {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0 0 1px;
+}
+
+.box .post {
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 0 0 12px;
+}
+
+.box .icon {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.box .icon li {
+    margin: 0 4px;
+    display: inline-block;
+}
+
+.box .icon li a {
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    line-height: 32px;
+    width: 33px;
+    height: 33px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.35s ease 0s;
+}
+
+.box .icon li a:hover {
+    color: #5f27cd;
+    background: #fff;
+    border-radius: 10px 0;
+}
+
+@media only screen and (max-width:990px) {
+    .box {
+        margin: 0 0 30px;
+    }
+}
